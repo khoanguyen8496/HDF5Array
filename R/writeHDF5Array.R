@@ -66,6 +66,7 @@ HDF5RealizationSink <- function(dim, dimnames=NULL, type="double",
                                 filepath=NULL, name=NULL,
                                 chunkdim=NULL, level=NULL)
 {
+    browser()
     if (is.null(filepath)) {
         filepath <- getHDF5DumpFile(for.use=TRUE)
     } else {
