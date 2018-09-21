@@ -151,7 +151,7 @@ h5createDataset2 <- function(filepath, name, dim, maxdim=dim,
     }
     ## If h5createDataset() fails, it will leave an HDF5 file handle opened.
     ## Calling H5close() will close all opened HDF5 object handles.
-    #on.exit(H5close())
+    on.exit(H5close())
     ok <- h5createDataset(filepath, name, dim, maxdims=maxdim,
                           storage.mode=type, H5type=H5type, size=size,
                           chunk=chunkdim, level=level)
